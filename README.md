@@ -22,6 +22,6 @@
   
 
 ### <a id="date"></a>
-* NSDate
+* -NSDate
   * `NSDate+Extension.swift`
   * `NSDate+TimeAgo.swift`
