@@ -23,3 +23,4 @@
 
 ### <a id="date"></a>NSDate
 > NSDate+Extension.swift
+> NSDate+TimeAgo.swift
