@@ -3,14 +3,20 @@
 ## 目录
 * Foundation
   * [NSDate](#date)
+  * [String](#string)
 
   
 
 ### 详细目录文件
 ### <a id="date"></a>
 * NSDate
-  * `NSDate+Extension.swift`
-  * `NSDate+TimeAgo.swift`
+  * `TimeEx.swift`
+  * `TimeAgo.swift`
+
+### <a id="string"></a>
+* String
+  * `Size.swift`
+  * `Trims.swift`
 
 
 <!--
