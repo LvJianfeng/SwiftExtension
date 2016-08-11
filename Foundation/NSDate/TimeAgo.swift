@@ -5,6 +5,7 @@
 //  Created by LvJianfeng on 16/8/11.
 //  Copyright © 2016年 LvJianfeng. All rights reserved.
 //
+//  OC源码传送门:https://github.com/kevinlawler/NSDate-TimeAgo
 
 import Foundation
 
