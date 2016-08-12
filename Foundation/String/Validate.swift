@@ -12,19 +12,19 @@ extension String{
     
     //MARK: 验证纯数字
     func validateNumber() -> Bool {
-        return NSPredicate.init(format: "SELF MATCHES %@", "^[0-9]*$").evaluateWithObject(self)
+        return NSPredicate(format: "SELF MATCHES %@", "^[0-9]*$").evaluateWithObject(self)
     }
     
     //MARK: 验证18位身份证号
     func validateIDNumber() -> Bool {
         if self.characters.count != 18 { return false }
-        return NSPredicate.init(format: "SELF MATCHES %@", "^(\\d{14}|\\d{17})(\\d|[xX])$").evaluateWithObject(self)
+        return NSPredicate(format: "SELF MATCHES %@", "^(\\d{14}|\\d{17})(\\d|[xX])$").evaluateWithObject(self)
     }
     
     //MARK: 验证18位身份证号(严格)
     func validateIDNumberStrict() -> Bool {
         if self.characters.count != 18 { return false }
-        let flag: Bool = NSPredicate.init(format: "SELF MATCHES %@", "^(^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$)|(^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])((\\d{4})|\\d{3}[Xx])$)$").evaluateWithObject(self)
+        let flag: Bool = NSPredicate(format: "SELF MATCHES %@", "^(^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$)|(^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])((\\d{4})|\\d{3}[Xx])$)$").evaluateWithObject(self)
         //如果通过该验证，说明身份证格式正确，但准确性还需计算
         let idNumber: NSString = self as NSString
         if flag {
@@ -63,38 +63,38 @@ extension String{
     
     //MARK: 验证邮箱
     func validateEmail() -> Bool {
-        return NSPredicate.init(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}").evaluateWithObject(self)
+        return NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}").evaluateWithObject(self)
     }
     
     //MARK: 验证手机号码（11纯数字）弱
     func validateMobilePhone() -> Bool {
         //修改成必须1开头的，第二个为3～8的数字
-        return NSPredicate.init(format: "SELF MATCHES %@", "^[1][3-8]\\d{9}$").evaluateWithObject(self)
+        return NSPredicate(format: "SELF MATCHES %@", "^[1][3-8]\\d{9}$").evaluateWithObject(self)
     }
     
     //MARK: 验证电话号码号码:格式为：XXXX-XXXXXXX，XXXX-XXXXXXXX，XXX-XXXXXXX，XXX-XXXXXXXX，XXXXXXX，XXXXXXXX
     func validateTelePhone() -> Bool {
-        return NSPredicate.init(format: "SELF MATCHES %@", "^(\\(\\d{3,4}\\)|\\d{3,4}-)?\\d{7,8}$").evaluateWithObject(self)
+        return NSPredicate(format: "SELF MATCHES %@", "^(\\(\\d{3,4}\\)|\\d{3,4}-)?\\d{7,8}$").evaluateWithObject(self)
     }
     
     //MARK: 验证电话号码或者手机号码
     func validatePhone() -> Bool {
-        return NSPredicate.init(format: "SELF MATCHES %@", "(\\d{3}-\\d{8}|\\d{4}-\\d{7})｜(^((\\(\\d{3}\\))|(\\d{3}\\-))?13\\d{9}|15[89]\\d{8}$)").evaluateWithObject(self)
+        return NSPredicate(format: "SELF MATCHES %@", "(\\d{3}-\\d{8}|\\d{4}-\\d{7})｜(^((\\(\\d{3}\\))|(\\d{3}\\-))?13\\d{9}|15[89]\\d{8}$)").evaluateWithObject(self)
     }
     
     //MARK: 验证密码：以字母开头，长度在8-16之间，只能包含字符、数字和下划线//6-18^[a-zA-Z]\\w{7,15}$
     func validatePassword() -> Bool {
-        return NSPredicate.init(format: "SELF MATCHES %@", "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$").evaluateWithObject(self)
+        return NSPredicate(format: "SELF MATCHES %@", "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$").evaluateWithObject(self)
     }
     
     //MARK: 验证验证码(6位数字)
     func validateVerifyCode() -> Bool {
-        return NSPredicate.init(format: "SELF MATCHES %@", "^\\d{6}$").evaluateWithObject(self)
+        return NSPredicate(format: "SELF MATCHES %@", "^\\d{6}$").evaluateWithObject(self)
     }
     
     //MARK: 是否有中文
     func validateExistChinese() -> Bool {
-        return NSPredicate.init(format: "SELF MATCHES %@", "^[\\u4e00-\\u9fa5]{2,10}").evaluateWithObject(self)
+        return NSPredicate(format: "SELF MATCHES %@", "^[\\u4e00-\\u9fa5]{2,10}").evaluateWithObject(self)
     }
     
 }
