@@ -3,6 +3,7 @@
 ## 目录
 * Foundation
   * [NSDate](#date)
+  * [NSNumber](#number)
   * [String](#string)
 
   
@@ -12,6 +13,10 @@
 * NSDate
   * `TimeEx.swift`
   * `TimeAgo.swift`
+
+### <a id="number"></a>
+* NSNumber
+  * `Format.swift`
 
 ### <a id="string"></a>
 * String
