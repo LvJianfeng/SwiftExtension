@@ -18,6 +18,7 @@
   * `Size.swift`
   * `Trims.swift`
   * `Uuid.swift`
+  * `Validate.swift`
 
 
 <!--
