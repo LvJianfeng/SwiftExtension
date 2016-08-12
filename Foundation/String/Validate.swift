@@ -87,6 +87,11 @@ extension String{
         return NSPredicate.init(format: "SELF MATCHES %@", "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$").evaluateWithObject(self)
     }
     
+    //MARK: 验证验证码(6位数字)
+    func validateVerifyCode() -> Bool {
+        return NSPredicate.init(format: "SELF MATCHES %@", "^\\d{6}$").evaluateWithObject(self)
+    }
+    
     //MARK: 是否有中文
     func validateExistChinese() -> Bool {
         return NSPredicate.init(format: "SELF MATCHES %@", "^[\\u4e00-\\u9fa5]{2,10}").evaluateWithObject(self)
