@@ -17,6 +17,7 @@
 * String
   * `Size.swift`
   * `Trims.swift`
+  * `Uuid.swift`
 
 
 <!--
